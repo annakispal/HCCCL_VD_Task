@@ -1,0 +1,55 @@
+#VISUAL DISCRIMINATION TASK
+
+begin;
+
+
+#INSTRUCTIONS
+
+instruction1_trial.present();
+instruction2_trial.present();
+
+# PRACTICE TRIALS
+
+loop
+   int i = 1
+until
+   i > practice.count()
+begin
+   practice[i].load();          
+   
+   practice_pic.set_part( 1, practice[i] ); 
+   practice_trial.present();   
+   
+   practice[i].unload(); 
+   
+   i = i + 1
+
+end;
+
+#INSTRUCTION
+
+instruction3_trial.present();
+	
+#TEST TRIALS
+
+loop
+   int i = 1
+until
+   i > test.count()
+begin
+   test[i].load();          
+   
+   test_pic.set_part( 1, test[i] ); 
+   test_trial.present();   
+   
+   test[i].unload(); 
+   
+   i = i + 1
+
+end;
+
+#THANKS
+
+thanks_trial.present ();
+	
+end;
