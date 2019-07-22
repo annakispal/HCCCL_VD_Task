@@ -74,7 +74,7 @@ loop
 until
    i > practice.count()
 begin
-   isi_trial.present()
+   isi_trial.present();
    practice_bmp.set_filename(practice[i][1]+".png");
 	practice_bmp.load();    
 	# we have 3 variables for the event code: (1) the phase of the experiment, (2) the filename, (3) and the same or different variable
