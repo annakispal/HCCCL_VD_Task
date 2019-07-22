@@ -400,8 +400,8 @@
 <device_type>3</device_type>
 <dx_device_type>19</dx_device_type>
 <ibn>Enter</ibn>
-<ibn>Right</ibn>
 <ibn>Left</ibn>
+<ibn>Right</ibn>
 <idn>Keyboard</idn>
 <index>0</index>
 <index>1</index>
@@ -410,8 +410,8 @@
 <label></label>
 <label></label>
 <offset>28</offset>
-<offset>205</offset>
 <offset>203</offset>
+<offset>205</offset>
 </idv>
 <sfn>all_scenarios</sfn>
 </sce>
