@@ -8,7 +8,7 @@ default_background_color = 255,255,255;
 active_buttons = 3;
 button_codes = 1,2,3; #enter #left #right
 response_matching = simple_matching;
-stimulus_properties = #I'm not sure about this part
+stimulus_properties = ExpPhase, string, Stimulus, string, SameOrDifferent, string; 
 event_code_delimiter = ",";
 pcl_file = "VisualDiscrimination.pcl";
 begin;
@@ -60,27 +60,20 @@ A továbblépéshez nyomja meg az ENTER gombot.";
 #stimuli
 # pd = Practice Different; ps = Practice Same
 
-array {
-   bitmap { filename = "1pd.png"; preload = false; };
-   bitmap { filename = "3pd.png"; preload = false; };
-   bitmap { filename = "4ps.png"; preload = false; };
-   bitmap { filename = "2pd.png"; preload = false; };
-   bitmap { filename = "4pd.png"; preload = false; };
-   bitmap { filename = "3ps.png"; preload = false; };
-   bitmap { filename = "1ps.png"; preload = false; };
-   bitmap { filename = "2ps.png"; preload = false; };
-} practice;
+
 
 trial {    
    trial_duration = 3000;
    trial_type = specific_response;
 	terminator_button = 2, 3;
-	
-   picture {
-   box { height = 1; width = 1; color = 0,0,0; };
-   x = 0; y = 0;
-   } practice_pic;
-   time = 0;
+	# the trial needs to contain a stimulus event in order for us to define event codes for logging, see .pcl
+	stimulus_event {
+		picture {
+			bitmap { filename = ""; preload = false; } practice_bmp;			
+			x = 0; y = 0;
+		} practice_pic;
+	time = 0;
+	} practice_event;	
 } practice_trial;
 
 #INSTRUCTION

@@ -2,6 +2,17 @@
 
 begin;
 
+array <string> practice [8][2]={
+{"1pd","d"},
+{"3pd","d"},
+{"4ps","s"},
+{"2pd","d"},
+{"4pd","d"},
+{"3ps","s"},
+{"1ps","s"},
+{"2ps","s"}};
+# Defining the array here in pcl makes it possible to use a 2D array with the 2nd dimension defining same or different as a parameter for logging
+
 
 #INSTRUCTIONS
 
@@ -15,13 +26,12 @@ loop
 until
    i > practice.count()
 begin
-   practice[i].load();          
-   
-   practice_pic.set_part( 1, practice[i] ); 
-   practice_trial.present();   
-   
-   practice[i].unload(); 
-   
+   practice_bmp.set_filename(practice[i][1]+".png");
+	practice_bmp.load();    
+	# we have 3 variables for the event code: (1) the phase of the experiment, (2) the filename, (3) and the same or different variable
+	# we log these by setting the stimulus parameters at the beginning of the sce file
+	practice_event.set_event_code("practice," + practice[i][1] + "," + practice [i][2]);
+   practice_trial.present();      
    i = i + 1
 
 end;
