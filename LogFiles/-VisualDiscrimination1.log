@@ -1,0 +1,54 @@
+Scenario - Visual Discrimination Task
+Logfile written - 07/24/2019 01:23:41
+
+Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+1	Response	1	6289	5959	3
+2	Response	1	11650	5339	4
+3	Response	2	17173	5379	3
+4	Response	3	21574	4298	3
+5	Response	3	25816	4154	3
+6	Response	2	29734	3819	4
+7	Response	2	38296	8393	4
+8	Response	2	49656	11292	3
+9	Response	2	62857	13018	2
+10	Response	2	74533	11569	3
+11	Response	1	83169	8409	6
+12	Response	3	96058	12161	3
+13	Response	2	109646	13289	14
+16	Response	3	183427	12677	3
+17	Response	3	195343	11431	3
+18	Response	2	207820	12113	3
+20	Response	2	240303	2067	3
+21	Response	2	246781	6383	3
+22	Response	3	250544	3500	4
+23	Response	2	260065	9366	3
+24	Response	3	262863	2030	3
+25	Response	3	267905	4912	2
+26	Response	2	271661	3352	4
+27	Response	2	276623	4825	3
+28	Response	3	279902	3120	3
+29	Response	3	283262	3157	3
+30	Response	2	287341	3913	3
+31	Response	2	291741	4160	3
+32	Response	3	294461	2560	3
+33	Response	2	297811	3252	3
+34	Response	3	301263	3215	4
+35	Response	2	304622	3252	5
+36	Response	3	308945	4252	5
+37	Response	2	312462	3283	3
+38	Response	3	315343	2675	3
+39	Response	2	319021	3529	3
+40	Response	3	322941	3794	3
+41	Response	2	326621	3487	3
+42	Response	3	329662	2873	3
+43	Response	2	332951	3171	2
+44	Response	3	336862	3759	3
+45	Response	2	340543	3619	3
+46	Response	3	346782	6037	3
+47	Response	2	356705	9647	4
+48	Response	2	369102	12076	2
+49	Response	3	385586	16265	2
+50	Response	2	401309	14876	3
+51	Response	3	413582	12031	3
+52	Response	1	422860	9181	3
