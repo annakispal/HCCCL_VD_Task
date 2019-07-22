@@ -56,15 +56,10 @@ A továbblépéshez nyomja meg az ENTER gombot.";
 }instruction2_trial;
 
 #PRACTICE
- 
-#stimuli
-# pd = Practice Different; ps = Practice Same
-
-
 
 trial {    
    trial_duration = 3000;
-   trial_type = specific_response;
+   trial_type = fixed;
 	terminator_button = 2, 3;
 	# the trial needs to contain a stimulus event in order for us to define event codes for logging, see .pcl
 	stimulus_event {
@@ -102,55 +97,9 @@ A továbblépéshez nyomja meg az ENTER gombot.";
 
 #TEST
 
-#stimuli
-#D = Different; S = Same
-
-array {
-   bitmap { filename = "20d.png"; preload = false; };
-   bitmap { filename = "15s.png"; preload = false; };
-   bitmap { filename = "1d.png"; preload = false; };
-   bitmap { filename = "12d.png"; preload = false; };
-   bitmap { filename = "14d.png"; preload = false; };
-   bitmap { filename = "8s.png"; preload = false; };
-   bitmap { filename = "4s.png"; preload = false; };
-   bitmap { filename = "20s.png"; preload = false; };
-   bitmap { filename = "9s.png"; preload = false; };
-   bitmap { filename = "6s.png"; preload = false; };
-   bitmap { filename = "18s.png"; preload = false; };
-   bitmap { filename = "16s.png"; preload = false; };
-   bitmap { filename = "5d.png"; preload = false; };
-   bitmap { filename = "9d.png"; preload = false; };
-   bitmap { filename = "18d.png"; preload = false; };
-   bitmap { filename = "7d.png"; preload = false; };
-   bitmap { filename = "14s.png"; preload = false; };
-   bitmap { filename = "17s.png"; preload = false; };
-   bitmap { filename = "5s.png"; preload = false; };
-   bitmap { filename = "10s.png"; preload = false; };
-   bitmap { filename = "19s.png"; preload = false; };
-   bitmap { filename = "8d.png"; preload = false; };
-   bitmap { filename = "10d.png"; preload = false; };
-   bitmap { filename = "13s.png"; preload = false; };
-   bitmap { filename = "2s.png"; preload = false; };
-   bitmap { filename = "11d.png"; preload = false; };
-   bitmap { filename = "6d.png"; preload = false; };
-   bitmap { filename = "7s.png"; preload = false; };
-   bitmap { filename = "12s.png"; preload = false; };
-   bitmap { filename = "11s.png"; preload = false; };
-   bitmap { filename = "1s.png"; preload = false; };
-   bitmap { filename = "16d.png"; preload = false; };
-   bitmap { filename = "19d.png"; preload = false; };
-   bitmap { filename = "15d.png"; preload = false; };
-   bitmap { filename = "17d.png"; preload = false; };
-   bitmap { filename = "3d.png"; preload = false; };
-   bitmap { filename = "2d.png"; preload = false; };
-   bitmap { filename = "4d.png"; preload = false; };
-   bitmap { filename = "3s.png"; preload = false; };
-   bitmap { filename = "13d.png"; preload = false; };
-} test;
-
 trial {    
    trial_duration = 3000;
-   trial_type = specific_response;
+   trial_type = fixed;
 	terminator_button = 2, 3;
 	
    picture {
@@ -179,3 +128,21 @@ trial{
    target_button = 1;
   } thanks_event;
  } thanks_trial;
+ 
+#ISI
+
+trial {
+ trial_duration = 1000;
+ trial_type = fixed;
+ 
+ stimulus_event {
+  picture {
+   background_color = 255, 255, 255;
+   
+   text {background_color = 255,255,255; font_color = 0,0,139,200; font = "Arial"; font_size = 40;
+     caption = "+";
+    } isi_text;
+    x = 0; y = 0;
+  }isi_pic;
+ }isi_event;
+}isi_trial;
