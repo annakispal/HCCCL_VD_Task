@@ -101,12 +101,14 @@ trial {
    trial_duration = 3000;
    trial_type = fixed;
 	terminator_button = 2, 3;
-	
-   picture {
-   box { height = 1; width = 1; color = 0,0,0; };
-   x = 0; y = 0;
-   } test_pic;
-   time = 0;
+
+	stimulus_event {
+		picture {
+			bitmap { filename = ""; preload = false; }test_bmp;			
+			x = 0; y = 0;
+		} test_pic;
+	time = 0;
+	} test_event;	
 } test_trial;
 
 #THANKS
