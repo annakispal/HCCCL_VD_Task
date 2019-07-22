@@ -2,6 +2,9 @@
 
 begin;
 
+#stimuli
+# pd = Practice Different; ps = Practice Same
+
 array <string> practice [8][2]={
 {"1pd","d"},
 {"3pd","d"},
@@ -12,6 +15,51 @@ array <string> practice [8][2]={
 {"1ps","s"},
 {"2ps","s"}};
 # Defining the array here in pcl makes it possible to use a 2D array with the 2nd dimension defining same or different as a parameter for logging
+
+#stimuli
+#D = Different; S = Same
+
+array <string> test [40][2]={
+{"20d","d"},
+{"15s","s"},
+{"1d","d"},
+{"12d","d"},
+{"14d","d"},
+{"8s","s"},
+{"4s","s"},
+{"20s","s"},
+{"9s","s"},
+{"6s","s"},
+{"18s","s"},
+{"16s","s"},
+{"5d","d"},
+{"9d","d"},
+{"18d","d"},
+{"7d","d"},
+{"14s","s"},
+{"17s","s"},
+{"5s","s"},
+{"10s","s"},
+{"19s","s"},
+{"8d","d"},
+{"10d","d"},
+{"13s","s"},
+{"2s","s"},
+{"11d","d"},
+{"6d","d"},
+{"7s","s"},
+{"12s","s"},
+{"11s","s"},
+{"1s","s"},
+{"16d","d"},
+{"19d","d"},
+{"15d","d"},
+{"17d","d"},
+{"3d","d"},
+{"2d","d"},
+{"4d","d"},
+{"3s","s"},
+{"13d","d"}};
 
 
 #INSTRUCTIONS
@@ -26,6 +74,7 @@ loop
 until
    i > practice.count()
 begin
+   isi_trial.present();
    practice_bmp.set_filename(practice[i][1]+".png");
 	practice_bmp.load();    
 	# we have 3 variables for the event code: (1) the phase of the experiment, (2) the filename, (3) and the same or different variable
@@ -47,13 +96,11 @@ loop
 until
    i > test.count()
 begin
-   test[i].load();          
-   
-   test_pic.set_part( 1, test[i] ); 
-   test_trial.present();   
-   
-   test[i].unload(); 
-   
+   isi_trial.present();
+   test_bmp.set_filename(test[i][1]+".png");
+	test_bmp.load();    
+	test_event.set_event_code("test," + test[i][1] + "," + test[i][2]);
+   test_trial.present();      
    i = i + 1
 
 end;
