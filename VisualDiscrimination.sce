@@ -66,6 +66,8 @@ trial {
 		picture {
 			bitmap { filename = ""; preload = false; } practice_bmp;			
 			x = 0; y = 0;
+			bitmap { filename = ""; preload = false; } buttons_p;
+                        x = 0; y = -300;
 		} practice_pic;
 	time = 0;
 	} practice_event;	
@@ -106,6 +108,8 @@ trial {
 		picture {
 			bitmap { filename = ""; preload = false; }test_bmp;			
 			x = 0; y = 0;
+			bitmap { filename = ""; preload = false; } buttons_t;
+                        x = 0; y = -300;
 		} test_pic;
 	time = 0;
 	} test_event;	
