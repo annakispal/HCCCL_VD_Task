@@ -6,7 +6,6 @@ begin;
 # pd = Practice Different; ps = Practice Same
 
 array <string> practice [8][8]={
-array <string> practice [8][8]={
 {"1pd","d","A","1","0","A","2","0"},
 {"3pd","d","B","1","55","B","2","55"},
 {"4ps","s","C","3","165"},
