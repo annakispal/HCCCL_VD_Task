@@ -8,7 +8,7 @@ default_background_color = 255,255,255;
 active_buttons = 3;
 button_codes = 1,2,3; #enter #left #right
 response_matching = simple_matching;
-stimulus_properties = ExpPhase, string, Stimulus, string, SameOrDifferent, string; 
+stimulus_properties = ExpPhase, string, Stimulus, string, SameOrDifferent, string, Type, string, CorrectAnswer, string; 
 event_code_delimiter = ",";
 pcl_file = "VisualDiscrimination.pcl";
 begin;
