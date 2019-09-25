@@ -26,7 +26,7 @@ trial {
    
    text {background_color = 255,255,255; font_color = 0,0,139,200; font = "Arial";
      caption = "A következő feladatban képeket fog látni.\nArra kérjük Önt, hogy gombnyomással jelezze, hogy a két kép között lát-e eltérést.\n
-Amennyiben nem lát eltérést, nyomja meg a BAL gombot.\nAmennyiben lát eltérést, nyomja meg a JOBB gombot.\n
+Amennyiben lát eltérést, nyomja meg a BAL gombot.\nAmennyiben nem lát eltérést, nyomja meg a JOBB gombot.\n
 A továbblépéshez nyomja meg az ENTER gombot.";
     } instruction1_text;
     x = 0; y = 0;
@@ -46,7 +46,7 @@ trial {
    
    text {background_color = 255,255,255; font_color = 0,0,139,200; font = "Arial";
      caption = "Először pár gyakorló képet fog látni.\nKérjük figyelje meg, hogy lát-e eltérést a két kép között.\n
-Amennyiben nem lát eltérést, nyomja meg a BAL gombot.\nAmennyiben lát eltérést, nyomja meg a JOBB gombot.\n
+Amennyiben lát eltérést, nyomja meg a BAL gombot.\nAmennyiben nem lát eltérést, nyomja meg a JOBB gombot.\n
 A továbblépéshez nyomja meg az ENTER gombot.";
     } instruction2_text;
     x = 0; y = 0;
@@ -87,7 +87,7 @@ trial {
    text {background_color = 255,255,255; font_color = 0,0,139,200; font = "Arial";
      caption = "Ez a gyakorlási fázis vége.\n
 A követekző részben 40 képpárt fog látni. Kérjük figyelje meg, hogy lát-e eltérést a két kép között.\n
-Amennyiben nem lát eltérést, nyomja meg a BAL gombot.\nAmennyiben lát eltérést, nyomja meg a JOBB gombot.\n
+Amennyiben lát eltérést, nyomja meg a BAL gombot.\nAmennyiben nem lát eltérést, nyomja meg a JOBB gombot.\n
 A továbblépéshez nyomja meg az ENTER gombot.";
     } instruction3_text;
     x = 0; y = 0;
