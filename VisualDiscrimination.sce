@@ -58,7 +58,7 @@ A továbblépéshez nyomja meg az ENTER gombot.";
 #PRACTICE
 
 trial {    
-   trial_duration = 3000;
+   trial_duration = 2000;
    trial_type = fixed;
 	terminator_button = 2, 3;
 	# the trial needs to contain a stimulus event in order for us to define event codes for logging, see .pcl
@@ -100,7 +100,7 @@ A továbblépéshez nyomja meg az ENTER gombot.";
 #TEST
 
 trial {    
-   trial_duration = 3000;
+   trial_duration = 2000;
    trial_type = fixed;
 	terminator_button = 2, 3;
 
