@@ -83,7 +83,40 @@ begin
 	# we have 3 variables for the event code: (1) the phase of the experiment, (2) the filename, (3) and the same or different variable
 	# we log these by setting the stimulus parameters at the beginning of the sce file
 	practice_event.set_event_code("practice," + practice[i][1] + "," + practice [i][2] + "," + practice [i][3] + practice [i][4] + practice [i][5] + practice [i][6] + practice [i][7] + practice [i][8] + "," + practice [i][9]);
-   practice_trial.present();      
+   practice_trial.present();
+	
+	int last=response_manager.response_count();
+	response_data lastd=response_manager.last_response_data();
+	int resp_button=lastd.button();
+	buttons_p.set_filename( "buttons.png" );
+	practice_bmp.set_filename(practice[i][1]+".png");
+	buttons_p.load();
+	practice_bmp.load();
+	int correct;
+	if practice[i][2] == "d" then
+		correct = 2;
+	else
+		correct = 3;
+	end;
+	
+   if last == 0 then
+		  feedback_text.set_caption("Sajnos lejárt az idő.");
+   elseif resp_button == correct then
+	     if practice[i][2] == "d" then
+			   feedback_text.set_caption("A helyes válasz: Eltérő\n\nAz ön válasza: Eltérő");
+	     elseif practice[i][2] == "s" then
+			   feedback_text.set_caption("A helyes válasz: Azonos\n\nAz ön válasza: Azonos");
+		  end;
+   elseif resp_button != correct then
+	     if practice[i][2] == "d" then
+			   feedback_text.set_caption("A helyes válasz: Eltérő\n\nAz ön válasza: Azonos");
+	     elseif practice[i][2] == "s" then
+			   feedback_text.set_caption("A helyes válasz: Azonos\n\nAz ön válasza: Eltérő");
+	     end;
+   end;
+   feedback_text.redraw();
+   feedback_trial.present();
+      
    i = i + 1
 
 end;
@@ -105,7 +138,7 @@ begin
    test_bmp.set_filename(test[i][1]+".png");
 	test_bmp.load();    
 	test_event.set_event_code("test," + test[i][1] + "," + test[i][2] + "," + test[i][3] + test[i][4] + test[i][5] + test[i][6] + test[i][7] + test[i][8] + "," + test[i][9]);
-   test_trial.present();      
+   test_trial.present();
    i = i + 1
 
 end;
